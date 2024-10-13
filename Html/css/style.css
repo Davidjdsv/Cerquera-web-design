@@ -1,9 +1,9 @@
 :root {
     --gris: #f6f6f6;
-    --claro: #fff;
+    --blanco: #fff;
     --obscuro: #000;
     --primario: #39A900;
-    --secundario1: #007832;
+    --secundario: #007832;
     --Fuente-principal: 3.8rem;
 }
 
@@ -20,7 +20,7 @@ html {
 body {
     font-size: 16px;
     /* background-color: var(--primario); */
-    background-image: linear-gradient(to top, var(--gris) 5%, var(--claro)95%);
+    background-image: linear-gradient(to top, var(--gris) 5%, var(--blanco)95%);
 }
 
 h1 {
@@ -70,7 +70,7 @@ span {
 
 .navegacion-principal a {
     display: block;
-    color: var(--claro);
+    color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
@@ -92,7 +92,7 @@ span {
 }
 
 .nav-bg {
-    background-color: var(--secundario1);
+    background-color: var(--secundario);
 }
 
 .fondo {
@@ -119,11 +119,12 @@ span {
 .ubicacion {
     display: flex;
     align-items: flex-end;
+    margin: 2rem;
 }
 
 .boton {
-    background-color: var(--secundario1);
-    color: var(--claro);
+    background-color: var(--secundario);
+    color: var(--blanco);
     padding: 1rem 3rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -148,7 +149,7 @@ span {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.75);
-    background-color: var(--claro);
+    background-color: var(--blanco);
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -174,7 +175,8 @@ span {
 .servicio .iconos {
     height: 7rem;
     width: 7rem;
-    background-color: var(--secundario1);
+    color: var(--blanco);
+    background-color: var(--secundario);
     border-radius: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -189,13 +191,13 @@ span {
     line-height: 2;
 }
 
-/* .iconos {
-
-} */
+.iconos {
+    color: var(--blanco);
+}
 
 .formulario {
     border: none;
-    background-color: var(--claro);
+    background-color: var(--blanco);
     width: min(60rem, 100%);
     margin: 0 auto;
     padding: 2rem;
@@ -208,7 +210,16 @@ span {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--secundario1);
+    color: var(--secundario);
+}
+
+/* Agregué la nueva clase btn-enviar-cancelar para poder centrar los botones
+del formulario*/
+
+.formulario .btn-enviar-cancelar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contenedor-campos {
@@ -222,14 +233,13 @@ span {
 }
 
 .campo label {
-    color: var(--secundario1);
+    color: var(--secundario);
     font-weight: bold;
     margin-bottom: .5rem;
     display: block;
 }
 
-.campo input,
-textarea {
+.campo input, textarea {
     background-color: var(--gris);
 }
 
